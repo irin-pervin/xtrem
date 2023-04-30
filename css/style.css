@@ -56,7 +56,9 @@ ul li {
 }
 
 .header-area {
-  background-color: var(--bg-color-1);
+  position: absolute;
+  width: 100%;
+  z-index: 100;
 }
 .header-area .header-content {
   display: flex;
@@ -67,31 +69,15 @@ ul li {
   display: inline-block;
   position: relative;
 }
-.header-area .header-content .logo a::before {
-  position: absolute;
-  content: "";
-  height: 1px;
-  width: 1%;
-  background-color: var(--color-primary);
-  bottom: -5px;
-  right: 0;
-  opacity: 0;
-  transition: var(--transition);
-}
-.header-area .header-content .logo a:hover::before {
-  opacity: 1;
-  width: 70%;
-}
 .header-area a {
   display: inline-block;
 }
 .header-area a .hamburger-container {
   display: flex;
-  height: 150px;
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 0 18px;
+  padding: 58px 18px;
 }
 
 .circle {
@@ -113,7 +99,37 @@ ul li {
 .banner-area {
   background-color: var(--bg-color-1);
   position: relative;
-  padding-top: 30px;
+  padding-top: 230px;
+  z-index: 1;
+}
+
+.line-wrapper-banner {
+  position: absolute;
+  width: 100%;
+  height: 950px;
+  display: block;
+  top: 0;
+  z-index: -1;
+}
+.line-wrapper-banner .line {
+  height: 100%;
+  width: 1px;
+  background: #343434;
+  position: absolute;
+  left: 10%;
+  top: 0;
+}
+.line-wrapper-banner .line.two {
+  left: 30%;
+}
+.line-wrapper-banner .line.three {
+  left: 50%;
+}
+.line-wrapper-banner .line.four {
+  left: 70%;
+}
+.line-wrapper-banner .line.five {
+  left: 90%;
 }
 
 .banner-inner {
@@ -140,7 +156,7 @@ ul li {
   width: 400px;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   line-height: 30px;
   text-transform: capitalize;
@@ -172,8 +188,15 @@ ul li {
 
 .star {
   position: absolute;
-  top: 0;
-  left: 100px;
+  top: 18%;
+  left: 103px;
+  z-index: -1;
+  width: 64px;
+  height: 64px;
+}
+.star img {
+  width: 64px;
+  height: 64px;
 }
 
 .banner-btn-play {
@@ -215,7 +238,7 @@ ul li {
 .banner-left-side {
   position: absolute;
   left: -89px;
-  top: 34%;
+  top: 54%;
   transform: rotate(270deg);
 }
 
@@ -327,25 +350,25 @@ ul.list li {
 
 .landing-wrapper {
   width: 99.9%;
-  height: 280px;
   margin: 20px auto;
   padding: 0;
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  margin-top: 50px;
 }
 
 .landing-inner-content {
   background-color: var(--bg-color-1);
-  width: 2620px;
-  height: 280px;
+  display: flex;
+  align-items: center;
 }
 
 .box {
   position: relative;
-  background: rgba(0, 50, 255, 0.3);
-  width: 240px;
-  height: 240px;
+  background: transparent;
+  width: 25%;
+  height: 550px;
   margin: 20px 20px 0 0;
   float: left;
   overflow: hidden;
@@ -360,7 +383,6 @@ ul.list li {
 }
 
 .box-content {
-  background: #000;
   position: absolute;
   top: 0;
   left: 0;

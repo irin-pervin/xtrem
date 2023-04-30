@@ -1,5 +1,7 @@
 .header-area {
-    background-color: var(--bg-color-1);
+    position: absolute;
+    width: 100%;
+    z-index: 100;
     .header-content {
         display: flex;
         align-items: center;
@@ -8,23 +10,6 @@
           a {
             display: inline-block;
             position: relative;
-            &::before {
-              position: absolute;
-              content: "";
-              height: 1px;
-              width: 1%;
-              background-color: var(--color-primary);
-              bottom: -5px;
-              right: 0;
-              opacity: 0;
-              transition: var(--transition);
-            }
-            &:hover {
-              &::before {
-                opacity: 1;
-                width: 70%;
-              }
-            }
           }
         }
     }
@@ -32,11 +17,10 @@
         display: inline-block;
         .hamburger-container {
             display: flex;
-            height: 150px;
             justify-content: center;
             align-items: center;
             position: relative;
-            padding: 0 18px;
+            padding: 58px 18px;
         }
     }
 }
