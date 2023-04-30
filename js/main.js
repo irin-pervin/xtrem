@@ -148,5 +148,3 @@ function parallaxIt(e, target, movement){
 
 
 
-
-
