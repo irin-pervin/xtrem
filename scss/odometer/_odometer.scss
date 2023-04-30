@@ -1,0 +1,38 @@
+.odometer-section {
+    display: flex;
+    margin-top: 65px;
+}
+
+.single-odometer {
+    margin-right: 60px;
+    &:last-child {
+        margin-right: 0;
+    }
+    .odometer-inner {
+        
+        .odometer {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 18px;
+            text-transform: capitalize;
+            color: #FF7425;
+            margin-bottom: 0;
+        }
+        span {
+            color: #FF7425;
+            font-size: 20px;
+        }
+
+        .odometer-description {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            text-transform: capitalize;
+            color: #757575;
+        }
+    }
+}

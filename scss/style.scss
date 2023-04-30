@@ -1,0 +1,35 @@
+@import 'default/variable';
+@import 'default/common';
+@import 'header/header';
+@import 'banner/banner-one.scss';
+@import 'counter/odometer';
+@import 'portfolio/portfolio';
+@import 'odometer/odometer';
+
+
+
+
+
+#hamburger-container{
+    display: flex;
+    height: 150px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .circle{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border: solid 2px gray;
+    border-radius: 100%;
+  }
+  
+  .green{
+    background: green;
+  }
+  .hamburger {
+    color: var(--color-border);
+}
