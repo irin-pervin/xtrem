@@ -91,8 +91,25 @@
   li {
     a {
       transition: var(--transition);
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 1%;
+        background-color: var(--color-primary);
+        bottom: -5px;
+        left: 0;
+        opacity: 0;
+        transition: var(--transition);
+
+      }
       &:hover {
         color: var(--color-primary-allt);
+        &::before {
+          opacity: 1;
+          width: 100%;
+        }
       }
     }
   }
@@ -215,14 +232,6 @@ text-transform: uppercase;
     }
   }
 }
-
-
-
-
-
-
-
-
 
 
 

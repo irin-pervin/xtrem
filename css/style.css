@@ -63,6 +63,25 @@ ul li {
   align-items: center;
   justify-content: space-between;
 }
+.header-area .header-content .logo a {
+  display: inline-block;
+  position: relative;
+}
+.header-area .header-content .logo a::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 1%;
+  background-color: var(--color-primary);
+  bottom: -5px;
+  right: 0;
+  opacity: 0;
+  transition: var(--transition);
+}
+.header-area .header-content .logo a:hover::before {
+  opacity: 1;
+  width: 70%;
+}
 .header-area a {
   display: inline-block;
 }
@@ -172,9 +191,25 @@ ul li {
 }
 .side-banner-inner li a {
   transition: var(--transition);
+  position: relative;
+}
+.side-banner-inner li a::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 1%;
+  background-color: var(--color-primary);
+  bottom: -5px;
+  left: 0;
+  opacity: 0;
+  transition: var(--transition);
 }
 .side-banner-inner li a:hover {
   color: var(--color-primary-allt);
+}
+.side-banner-inner li a:hover::before {
+  opacity: 1;
+  width: 100%;
 }
 
 .banner-left-side {
